@@ -34,7 +34,7 @@ public class GitHubPage {
     private WebElement projectLink;
 
     @FindBy(css = "div > p.my-3")
-    private WebElement projectAbout
+    private WebElement projectAbout;
 
     public GitHubPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
