@@ -72,4 +72,11 @@ class GithubWDMPageTest {
         assertEquals("webdrivermanager", page.getProjectText());
         assertEquals(URL, page.getProjectReferenceLink());
     }
+
+    @Test
+    void checkRpjectAbout() {
+        GitHubPage page = new GitHubPage(driver);
+
+        assertEquals("Automated driver management and other helper features for Selenium WebDriver in Java", page.getProjectAbout());
+    }
 }

@@ -33,6 +33,9 @@ public class GitHubPage {
     @FindBy(css = "[itemprop='name'] > a")
     private WebElement projectLink;
 
+    @FindBy(css = "div > p.my-3")
+    private WebElement projectAbout
+
     public GitHubPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -43,5 +46,9 @@ public class GitHubPage {
 
     public String getProjectText() {
         return projectLink.getText();
+    }
+
+    public String getProjectAbout() {
+        return projectAbout.getText();
     }
 }
